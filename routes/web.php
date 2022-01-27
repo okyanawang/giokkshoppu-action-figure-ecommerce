@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('/master', function () {
     return view('layouts.master');
 });
+
+Route::get('/home', function () {
+    return view('home.index');
+});

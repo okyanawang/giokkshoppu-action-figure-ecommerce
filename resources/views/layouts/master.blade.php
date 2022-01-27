@@ -31,29 +31,7 @@
     @include('layouts.partials.header')
     <!-- Header part end-->
 
-    <!-- banner part start-->
-    @include('layouts.partials.banner')
-    <!-- banner part start-->
-
-    <!-- feature_part start-->
-    @include('layouts.partials.featureproducts')
-    <!-- upcoming_event part start-->
-
-    <!-- product_list start-->
-    @include('layouts.partials.awesomeproducts')
-    <!-- product_list part start-->
-
-    <!-- awesome_shop start-->
-    @include('layouts.partials.bigsale')
-    <!-- awesome_shop part start-->
-
-    <!-- product_list part start-->
-    @include('layouts.partials.bestsellers')
-    <!-- product_list part end-->
-
-    <!-- subscribe_area part start-->
-    @include('layouts.partials.subscribe')
-    <!--::subscribe_area part end::-->
+    @yield('content')
 
     <!--::footer_part start::-->
     @include('layouts.partials.footer')
@@ -85,6 +63,8 @@
     <script src="{{asset('js/mail-script.js')}}"></script>
     <!-- custom js -->
     <script src="{{asset('js/custom.js')}}"></script>
+
+    @stack('script')
 </body>
 
 </html>
