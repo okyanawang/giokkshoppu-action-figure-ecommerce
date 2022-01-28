@@ -56,7 +56,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="hearer_icon d-flex">
+                    {{-- <div class="hearer_icon d-flex">
                         <a id="search_1" href="javascript:void(0)"><i class="ti-search"></i></a>
                         <a href=""><i class="ti-heart"></i></a>
                         <div class="dropdown cart">
@@ -71,7 +71,41 @@
                             </div> -->
                             
                         </div>
-                    </div>
+                    </div> --}}
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Authentication Links -->
+                        @guest
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
+                        @else
+                        <div class="nav-item">
+                            <div class="dropdown cart">
+                                <a class="nav-link" id="navbarDropdown3" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-cart-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->fullname }} <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+                    </ul>
                 </nav>
             </div>
         </div>
