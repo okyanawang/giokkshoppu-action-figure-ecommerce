@@ -22,10 +22,14 @@ class CartController extends Controller{
         $banyak = $request->quantity;
         $harga = $request->price;
         $res = $harga * $banyak;
+        if($banyak < 1){
+            DB::table('orders_detail')->where('id', $request->id)->delete();
+        }else{
+            $affected = DB::table('orders_detail')
+                ->where('id', $request->id)
+                ->update(['quantity' => $request->quantity, 'total_price' => $res]);
+        }
         // dd($res);
-        $affected = DB::table('orders_detail')
-            ->where('id', $request->id)
-            ->update(['quantity' => $request->quantity, 'total_price' => $res]);
         return redirect('/cart');
     }
 }
