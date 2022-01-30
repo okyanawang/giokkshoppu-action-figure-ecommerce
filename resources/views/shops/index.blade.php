@@ -9,6 +9,9 @@
                         <h2>Items</h2>
                     </div>
                 </div>
+                    <div class="col text-right">
+                        <<a class="btn_2 btn-outline-info btn-block" href="/cart">Go to cart</a>
+                    </div>
             </div>
             <div class="row">
                 <div class="col-lg-12">
