@@ -54,12 +54,18 @@
                                     <h4>{{ $item->name }}</h4>
                                     <h3>Rp {{ $item->price }}</h3>
                                 </div>
-                                <form action="shop" method="GET" enctype="multipart/form-data">
+                                {{-- <form action="shop" method="GET" enctype="multipart/form-data">
                                     @csrf
                                     <button action="shop" class="px-4 py-2 text-black bg-blue-800 rounded">Add To Cart</button>
-                                </form>
+                                </form> --}}
+                                <a class="btn btn-outline-info px-4 py-2 text-black bg-blue-800 rounded" href="/shop">Add To Cart</a>
                             </div>
                         @endforeach
+                    </div>
+                    <br><br>
+                    <div class="col text-center">
+                        {{-- <button class="btn btn-default">Centered button</button> --}}
+                        <a class="btn_2 btn-outline-info btn-block" href="/shop">Go to shops</a>
                     </div>
                 </div>
             </div>
