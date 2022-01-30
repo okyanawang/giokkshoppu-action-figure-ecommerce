@@ -20,7 +20,6 @@ class CreateProductsTable extends Migration
             $table->integer('weight');
             $table->text('description');
             $table->string('image');
-            $table->string('category');
             $table->integer('stock');
             $table->unsignedBigInteger('categories_id');
             $table->foreign('categories_id')->references('id')->on('categories');

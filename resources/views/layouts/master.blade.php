@@ -24,6 +24,9 @@
     <link rel="stylesheet" href="{{asset('css/slick.css')}}">
     <!-- style CSS -->
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('css/nice-select.css')}}">
+    <link rel="stylesheet" href="{{asset('css/price_rangs.css')}}">
+
 </head>
 
 <body>
@@ -61,6 +64,8 @@
     <script src="{{asset('js/jquery.form.js')}}"></script>
     <script src="{{asset('js/jquery.validate.min.js')}}"></script>
     <script src="{{asset('js/mail-script.js')}}"></script>
+    <script src="{{asset('js/stellar.js')}}"></script>
+    <script src="{{asset('js/price_rangs.js')}}"></script>
     <!-- custom js -->
     <script src="{{asset('js/custom.js')}}"></script>
 
