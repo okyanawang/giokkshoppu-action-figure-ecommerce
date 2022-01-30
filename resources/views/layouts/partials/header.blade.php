@@ -54,6 +54,11 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="contact.html">Contact</a>
                             </li>
+                            @can('isAdmin')
+                            <li class="nav-item">
+                                <a class="nav-link text-danger" href="/product">Admin</a>
+                            </li>
+                            @endcan
                         </ul>
                     </div>
                     {{-- <div class="hearer_icon d-flex">

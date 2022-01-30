@@ -18,12 +18,15 @@
     <!-- flaticon CSS -->
     <link rel="stylesheet" href="{{asset('css/flaticon.css')}}">
     <link rel="stylesheet" href="{{asset('css/themify-icons.css')}}">
+    <link rel="stylesheet" href="{{asset('css/nice-select.css')}}">
     <!-- font awesome CSS -->
     <link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}">
     <!-- swiper CSS -->
     <link rel="stylesheet" href="{{asset('css/slick.css')}}">
     <!-- style CSS -->
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    {{-- stack ss --}}
+    @stack('style')
 </head>
 
 <body>
@@ -65,6 +68,8 @@
     <script src="{{asset('js/custom.js')}}"></script>
 
     @stack('script')
+    @include('sweetalert::alert')
+
 </body>
 
 </html>

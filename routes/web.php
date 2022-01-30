@@ -20,4 +20,8 @@ Route::get('/', function () {
 });
 Auth::routes();
 
-// Route::get('/auth', 'HomeController@index')->name('auth');
+Route::resource('product', 'ProductController');
+Route::resource('order', 'OrderController')->only([
+    'edit', 'update'
+]);
+// Route::resource('orderdetail', 'OrderdetailController');

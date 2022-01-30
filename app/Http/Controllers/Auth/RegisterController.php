@@ -5,9 +5,11 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
+use App\Order;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Carbon;
 
 class RegisterController extends Controller
 {
@@ -66,7 +68,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user= User::create([
             'fullname' => $data['fullname'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
@@ -74,5 +76,16 @@ class RegisterController extends Controller
             'address' => $data['address'],
             'phone' => $data['phone']
         ]);
+
+        $order = Order::create([
+            'amount' => 0,
+            'shipping_address' => "empty",
+            'order_address' => "empty",
+            'order_date' => $user->created_at,
+            'status' => "belum order",
+            'users_id' => $user->id
+        ]);
+
+        return ($user);
     }
 }
