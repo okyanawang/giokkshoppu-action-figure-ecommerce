@@ -22,7 +22,7 @@
             <div class="row">
               <div class="col-lg-8">
                 <h3>Checkout Details</h3>
-                <form class="row contact_form" action="/order/{{$order->id}}" method="post" novalidate="novalidate">
+                <form class="row contact_form" action="/order/{{$orders_id}}" method="post" novalidate="novalidate">
                 @csrf
                 @method('PUT')
                   <div class="col-md-12 form-group p_star">
@@ -54,17 +54,17 @@
                       </tr>
                     </thead>
                     <tbody>
-                        @foreach ($details as $detail)
+                        @foreach ($cartItems as $item)
                         <tr>
-                            <td>{{$detail->product->name}}</td>
-                            <td>x{{$detail->quantity}}</td>
-                            <td>Rp{{$detail->price}}</td>
+                            <td>{{$item->name}}</td>
+                            <td>x{{$item->quantity}}</td>
+                            <td>Rp{{$item->price}}</td>
                         </tr>
                     @endforeach
                       <tr>
                         <td>TOTAL</td>
                         <td></td>
-                        <td>Rp{{$total}}</td>
+                        <td>Rp{{$sums}}</td>
                       </tr>
                     </tbody>
                   </table>

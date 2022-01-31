@@ -1,21 +1,6 @@
 @extends('layouts.master')
 
 @section('content')
-<section class="breadcrumb breadcrumb_bg">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="breadcrumb_iner">
-                    <div class="breadcrumb_iner_item">
-                        <h2>Login</h2>
-                        <p>Home <span>-</span> Tracking Order</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- breadcrumb start-->
 
 <!--================login_part Area =================-->
 <section class="login_part padding_top">

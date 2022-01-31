@@ -6,20 +6,6 @@
 @endpush
 
 @section('content')
-    <section class="breadcrumb breadcrumb_bg">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="breadcrumb_iner">
-                        <div class="breadcrumb_iner_item">
-                            <h2>List Product</h2>
-                            <p>Home <span>-</span> Tracking Order</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <div class="container padding_top">
         <a href="/product/create" class="genric-btn primary radius mb-3">Create New Product</a>
@@ -42,7 +28,11 @@
                         <tr>
                         <td>{{ $product->id }}</td>
                         <td>
-                            <img src="{{ asset('images/product/'.$product->image)}}" alt="image" height="75px">
+                            @if (Str::contains($product->image, 'https:/'))
+                                <img src="{{$product->image}}" alt="image" height="75px">
+                            @else
+                                <img src="{{ asset('images/product/'.$product->image)}}" alt="image" height="75px">
+                            @endif
                         </td>
                         <td>{{ $product->name }}</td>
                         <td>{{ $product->price }}</td>

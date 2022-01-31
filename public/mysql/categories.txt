@@ -1,0 +1,23 @@
+INSERT INTO categories(name, description, thumbnail) VALUES ("Doll", "None", "None");
+INSERT INTO categories(name, description, thumbnail) VALUES ("MODEROID", "None", "None");
+INSERT INTO categories(name, description, thumbnail) VALUES ("Play Arts Kai", "None", "None");
+INSERT INTO categories(name, description, thumbnail) VALUES ("Soft Vinyl", "None", "None");
+INSERT INTO categories(name, description, thumbnail) VALUES ("Goods", "None", "None");
+
+INSERT INTO categories(name, description, thumbnail) VALUES ("Accessories", "None", "None");
+INSERT INTO categories(name, description, thumbnail) VALUES ("Action Figures", "None", "None");
+INSERT INTO categories(name, description, thumbnail) VALUES ("Bring Arts", "None", "None");
+INSERT INTO categories(name, description, thumbnail) VALUES ("Pop Up Parade", "None", "None");
+INSERT INTO categories(name, description, thumbnail) VALUES ("Deformed Figure", "None", "None");
+
+INSERT INTO categories(name, description, thumbnail) VALUES ("Manga", "None", "None");
+INSERT INTO categories(name, description, thumbnail) VALUES ("CD/DVD", "None", "None");
+INSERT INTO categories(name, description, thumbnail) VALUES ("Model Kit", "None", "None");
+INSERT INTO categories(name, description, thumbnail) VALUES ("Figma", "None", "None");
+INSERT INTO categories(name, description, thumbnail) VALUES ("Japanese Light Novel", "None", "None");
+
+INSERT INTO categories(name, description, thumbnail) VALUES ("Prize Figure", "None", "None");
+INSERT INTO categories(name, description, thumbnail) VALUES ("PVC Figure", "None", "None");
+INSERT INTO categories(name, description, thumbnail) VALUES ("Scale Figure", "None", "None");
+INSERT INTO categories(name, description, thumbnail) VALUES ("Nendoroid", "None", "None");
+INSERT INTO categories(name, description, thumbnail) VALUES ("Banner", "None", "None");

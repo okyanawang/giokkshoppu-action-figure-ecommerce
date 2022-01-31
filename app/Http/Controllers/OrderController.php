@@ -3,67 +3,35 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 use App\Order;
 use App\OrderDetail;
 use App\User;
 use Auth;
+use DB;
 
 class OrderController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
+    public function __construct(){
+        $this->middleware('auth');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
-        $order = Order::findorfail($id);
-        $details = OrderDetail::where('orders_id', $id)->get();
-        $total = OrderDetail::where('orders_id', $id)->sum('price');
-        return view('order.edit', compact('order', 'details', 'total'));
+
+        $user = Auth::user();
+        $cartItems = DB::table('orders_detail')->get()
+        ->where('users_id', $user->id);
+        $sums = DB::table('orders_detail')
+            ->where('users_id', $user->id)
+            ->sum('total_price');
+        $orders_id = DB::table('orders_detail')
+            ->where('users_id', $user->id)->select('orders_id')
+            ->pluck('orders_id')->first();
+
+        // dd($cartItems);
+
+        return view('order.edit', compact('cartItems', 'sums', 'orders_id'));
     }
 
     /**
@@ -80,31 +48,21 @@ class OrderController extends Controller
             'shipping_address' => 'required',
         ]);
 
-        $total = OrderDetail::where('orders_id', $id)->sum('price');
+        $sums = DB::table('orders_detail')
+            ->where('users_id', Auth::id())
+            ->sum('total_price');
 
-        $order_data = [
-            'amount' => $total,
-            'shipping_address' => $request->shipping_address,
-            'order_address' => $request->order_address,
-            'order_date' => date('Y-m-d'),
-            'status' => "sudah order"
-        ];
+        $query = DB::table('orders')
+                -> where('id', $id)
+                -> update([
+                    'amount' => $sums,
+                    'shipping_address' => $request['shipping_address'],
+                    'order_address' => $request['order_address'],
+                    'order_date' => date('Y-m-d'),
+                    'status' => 'clear'
+                ]);
 
-        $order = Order::findorfail($id);
-        // dd($order);
-
-        Order::create([
-            'amount' => 0,
-            'shipping_address' => "empty",
-            'order_address' => "empty",
-            'order_date' =>  date('Y-m-d'),
-            'status' => "belum order",
-            'users_id' => Auth::id()
-        ]);
-
-        $order->update($order_data);
-
-        return redirect('/');
+        return redirect('/shop');
     }
 
     /**
@@ -113,8 +71,4 @@ class OrderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        //
-    }
 }

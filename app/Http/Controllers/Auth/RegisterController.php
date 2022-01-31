@@ -77,14 +77,14 @@ class RegisterController extends Controller
             'phone' => $data['phone']
         ]);
 
-        $order = Order::create([
-            'amount' => 0,
-            'shipping_address' => "empty",
-            'order_address' => "empty",
-            'order_date' => $user->created_at,
-            'status' => "belum order",
-            'users_id' => $user->id
-        ]);
+        // $order = Order::create([
+        //     'amount' => 0,
+        //     'shipping_address' => "empty",
+        //     'order_address' => "empty",
+        //     'order_date' => $user->created_at,
+        //     'status' => "belum order",
+        //     'users_id' => $user->id
+        // ]);
 
         return ($user);
     }

@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CartController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,17 +13,25 @@
 |
 */
 
-Route::get('/master', function () {
-    return view('layouts.master');
-});
+Route::get('/', 'HomeController@index');
+// Route::post('/', 'HomeController@store');
 
-Route::get('/', function () {
-    return view('home.index');
-});
 Auth::routes();
 
 Route::resource('product', 'ProductController');
 Route::resource('order', 'OrderController')->only([
     'edit', 'update'
 ]);
-// Route::resource('orderdetail', 'OrderdetailController');
+
+Route::get('/shop', 'ShopController@index');
+Route::post('/shop', 'ShopController@store');
+Route::get('/cart', 'CartController@index');
+Route::post('/cart', 'CartController@store');
+
+// Route::get('cart', [CartController::class, 'cartList'])->name('cart.list');
+// Route::post('cart', [CartController::class, 'addToCart'])->name('cart.store');
+// Route::post('update-cart', [CartController::class, 'updateCart'])->name('cart.update');
+// Route::post('remove', [CartController::class, 'removeCart'])->name('cart.remove');
+// Route::post('clear', [CartController::class, 'clearAllCart'])->name('cart.clear');
+
+// Route::get('/auth', 'HomeController@index')->name('auth');

@@ -1,0 +1,32 @@
+INSERT INTO products(name, price, weight, description, image, stock, categories_id) 
+VALUES ("Coreful Albedo: Knit Dress Ver.", 350000, 200, "MISB and original from Japan Material: ABS,PVC", "https://shumi.sgp1.cdn.digitaloceanspaces.com/items/coreful-albedo-overlord-knit-dres-ver/thumbnail/coreful-albedo-overlord-knit-dres-ver.jpeg", 100, 16);
+
+INSERT INTO products(name, price, weight, description, image, stock, categories_id) 
+VALUES ("PVC 1/7 Ganyu: Plenilune Gaze Ver. (With Exclusive Bonus)", 2140000, 250, "MISB and original from Japan Material: ABS,PVC Height: 1/7 H=220mm", "https://shumi.sgp1.cdn.digitaloceanspaces.com/items/pvc-17-ganyu-plenilune-gaze-ver/thumbnail/pvc-17-ganyu-plenilune-gaze-ver.jpg", 100, 17);
+
+INSERT INTO products(name, price, weight, description, image, stock, categories_id) 
+VALUES ("Pop Up Parade Chika Fujiwara", 470000, 200, "MISB and original from Japan Material: ABS,PVC Height: H=170mm", "https://shumi.sgp1.cdn.digitaloceanspaces.com/items/pop-up-parade-chika-fujiwara/thumbnail/pop-up-parade-chika-fujiwara.jpg", 100, 9);
+
+INSERT INTO products(name, price, weight, description, image, stock, categories_id) 
+VALUES ("figma Karyl", 1090000, 200, "MISB and original from Japan Material ABS,PVC Height H=140mm", "https://shumi.sgp1.cdn.digitaloceanspaces.com/items/figma-karyl/thumbnail/figma-karyl.jpg", 100, 14);
+
+INSERT INTO products(name, price, weight, description, image, stock, categories_id) 
+VALUES ("Ichiban Kuji Nakano Nino: One Piece Dress Ver.", 1020000, 200, "MISB and original from Japan Material: ABS,PVC Height: in Scale H=180mm (7.02in)", "https://shumi.sgp1.cdn.digitaloceanspaces.com/items/ichiban-kuji-nakano-nino-one-piece-dress-ver/thumbnail/ichiban-kuji-nakano-nino-one-piece-dress-ver.jpeg", 100, 16);
+
+INSERT INTO products(name, price, weight, description, image, stock, categories_id) 
+VALUES ("Ichiban Kuji Nakano Itsuki: One Piece Dress Ver.", 900000, 200, "MISB and original from Japan Material: ABS,PVC Height: in Scale H=180mm (7.02in)", "https://shumi.sgp1.cdn.digitaloceanspaces.com/items/ichiban-kuji-nakano-itsuki-one-piece-dress-ver/thumbnail/ichiban-kuji-nakano-itsuki-one-piece-dress-ver.jpeg", 100, 16);
+
+INSERT INTO products(name, price, weight, description, image, stock, categories_id) 
+VALUES ("PVC 1/7 Ganyu: Plenilune Gaze Ver. (With Exclusive Bonus)", 2140000, 250, "MISB and original from Japan Material: ABS,PVC Height: 1/7 H=220mm", "https://shumi.sgp1.cdn.digitaloceanspaces.com/items/pvc-17-ganyu-plenilune-gaze-ver/thumbnail/pvc-17-ganyu-plenilune-gaze-ver.jpg", 100, 20);
+
+INSERT INTO products(name, price, weight, description, image, stock, categories_id) 
+VALUES ("PVC 1/7 Minami Nanami", 1730000, 200, "MISB and original from Japan Material: ABS,PVC Height: 1/7 in Scale H=275mm", "https://shumi.sgp1.cdn.digitaloceanspaces.com/items/pvc-17-minami-nanami/thumbnail/pvc-17-minami-nanami.jpg", 100, 20);
+
+INSERT INTO products(name, price, weight, description, image, stock, categories_id) 
+VALUES ("PVC Jinguji Tamamo", 2120000, 200, "MISB and original from Japan Material: ABS,PVC Height: H=225mm (8.85in)", "https://shumi.sgp1.cdn.digitaloceanspaces.com/items/pvc-jinguji-tamamo/thumbnail/pvc-jinguji-tamamo.jpg", 100, 20);
+
+INSERT INTO products(name, price, weight, description, image, stock, categories_id) 
+VALUES ("Mini Figure Tedeza Rize", 330000, 200, "MISB and original from Japan Material: ABS,PVC Height: H=65mm (2.54in)", "https://shumi.sgp1.cdn.digitaloceanspaces.com/items/mini-figure-tedeza-rize/thumbnail/mini-figure-tedeza-rize.jpg", 100, 20);
+
+INSERT INTO products(name, price, weight, description, image, stock, categories_id) 
+VALUES ("ConoFig Kocho Shinobu", 770000, 200, "MISB and original from Japan Material: ABS,PVC Height: H=150mm", "https://shumi.sgp1.cdn.digitaloceanspaces.com/items/conofig-kocho-shinobu/thumbnail/conofig-kocho-shinobu.jpg", 100, 20);
