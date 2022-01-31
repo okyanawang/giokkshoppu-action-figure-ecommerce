@@ -45,7 +45,7 @@
                 </div>
             </div>
             <div class="row align-items-center justify-content-between">
-                <div class="col-lg-12">
+                <div class="col-lg-8">
                     <div class="best_product_slider owl-carousel">
                         @foreach ($products as $key => $item)
                             <div class="single_product_item">

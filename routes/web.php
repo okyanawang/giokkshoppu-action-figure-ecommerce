@@ -22,6 +22,9 @@ Route::resource('product', 'ProductController');
 Route::resource('order', 'OrderController')->only([
     'edit', 'update'
 ]);
+Route::resource('category', 'CategoryController')->only([
+    'show'
+]);
 
 Route::get('/shop', 'ShopController@index');
 Route::post('/shop', 'ShopController@store');

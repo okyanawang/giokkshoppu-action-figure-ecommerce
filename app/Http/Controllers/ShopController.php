@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use DB;
+use App\Category;
 
 class ShopController extends Controller
 {
@@ -14,9 +15,10 @@ class ShopController extends Controller
     
     public function index(){
         $products = DB::table('products')->get();
+        $categories = Category::all();
         $user = Auth::user();
         // dd($products);
-        return view('shops.index', compact('products', 'user'));
+        return view('shops.index', compact('products', 'user', 'categories'));
     }
 
     public function store(Request $request){

@@ -14,7 +14,13 @@
                     </div>
             </div>
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-2">
+                    <h4 class="mb-4">Categories</h4>
+                    @foreach ($categories as $item)
+                    <a href="/category/{{$item->id}}" style="color:black;">{{$item->name}}</a><br><hr>
+                    @endforeach
+                </div>
+                <div class="col-lg-10">
                     <div class="row align-items-center justify-content-start">
                         @forelse ($products as $key => $product)
                             <div class="col-lg-3 col-sm-6">
