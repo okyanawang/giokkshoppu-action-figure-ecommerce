@@ -44,6 +44,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        // dd($request->all());
         $this->authorize('isAdmin');
 
         $request->validate([
@@ -53,10 +54,10 @@ class ProductController extends Controller
             'description' => 'required',
             'stock' => 'required',
             'categories_id' => 'required',
-            'image' => 'required|mimes:png,jpg,jpeg',
+            'image' => 'required',
         ]);
 
-        $image = time().'.'.$request->image->extension();
+        // $image = time().'.'.$request->image->extension();
 
         $product = new Product;
 
@@ -66,10 +67,10 @@ class ProductController extends Controller
         $product->description = $request->description;
         $product->stock = $request->stock;
         $product->categories_id = $request->categories_id;
-        $product->image = $image;
+        $product->image = $request->image;
    
         $product->save();
-        $request->image->move(public_path('images/product'), $image);
+        // $request->image->move(public_path('images/product'), $image);
 
         Alert::success('Success', 'Product Successfully Created!');
         return redirect('/product');
@@ -170,8 +171,8 @@ class ProductController extends Controller
         
         $product = Product::findorfail($id);
 
-        $path = "images/product/";
-        File::delete($path . $product->image);
+        // $path = "images/product/";
+        // File::delete($path . $product->image);
         $product->delete();
 
         Alert::success('Success', 'Product Successfully Removed!');

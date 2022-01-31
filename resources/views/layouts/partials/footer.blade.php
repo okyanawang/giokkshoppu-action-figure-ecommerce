@@ -47,8 +47,8 @@
             </div>
             <div class="col-sm-6 col-lg-4">
                 <div class="single_footer_part">
-                    <h4>Newsletter</h4>
-                    <p>Heaven fruitful doesn't over lesser in days. Appear creeping
+                    <h4>Noted</h4>
+                    <p>This site were created by Egi and Okyan (Giok) with Laravel and Free Bootstrap 4 Template by Colorlib
                     </p>
                     <div id="mc_embed_signup">
                         <form target="_blank"

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use DB;
+use RealRashid\SweetAlert\Facades\Alert;
 use App\Category;
 
 class ShopController extends Controller
@@ -74,6 +75,7 @@ class ShopController extends Controller
         // dd($query);
 
         // return redirect('/shop')->with('success', 'Product added to cart successfully!');
+        Alert::success('Success', 'Product Successfully Added!');
         return redirect('/shop')->with('success', 'Product added to cart successfully!');
     }
 }
