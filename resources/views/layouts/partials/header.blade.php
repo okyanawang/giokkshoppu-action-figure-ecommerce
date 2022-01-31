@@ -15,29 +15,11 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/">Home</a>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_1"
-                                    role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Shop
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
-                                    <a class="dropdown-item" href="/shop"> Products</a>
-                                    
-                                </div>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_3"
-                                    role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    pages
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
-                                    <a class="dropdown-item" href="/login"> login</a>
-                                    <a class="dropdown-item" href="/cart">shopping cart</a>
-                                </div>
-                            </li>
-                            
                             <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact</a>
+                                <a class="nav-link" href="/shop">Products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/cart">Shopping Cart</a>
                             </li>
                             @can('isAdmin')
                             <li class="nav-item">

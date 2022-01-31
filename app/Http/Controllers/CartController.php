@@ -13,14 +13,18 @@ class CartController extends Controller{
 
     public function index(){
         $user = Auth::user();
+        $orders_id = DB::table('orders')
+            ->where('users_id', $user->id)
+            ->where('status', 'unclear')
+            ->select('id')
+            ->pluck('id')->first();
         $cartItems = DB::table('orders_detail')->get()
-        ->where('users_id', $user->id);
+            ->where('users_id', $user->id)
+            ->where('orders_id', $orders_id);
         $sums = DB::table('orders_detail')
             ->where('users_id', $user->id)
+            ->where('orders_id', $orders_id)
             ->sum('total_price');
-        $orders_id = DB::table('orders_detail')
-            ->where('users_id', $user->id)->select('orders_id')
-            ->pluck('orders_id')->first();
         // dd($sums);
         return view('carts.index', compact('cartItems', 'user', 'sums', 'orders_id'));
     }
@@ -38,7 +42,6 @@ class CartController extends Controller{
         }
         // dd($res);
 
-        Alert::success('Success', 'Order Succes');
         return redirect('/cart');
     }
 }

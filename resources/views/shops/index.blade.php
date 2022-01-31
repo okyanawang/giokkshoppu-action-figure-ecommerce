@@ -20,12 +20,10 @@
                             <div class="col-lg-3 col-sm-6">
                                 <div class="single_product_item" style="border: 2px solid #E7E9ED">
                                     @if (Str::contains($product->image, 'https:/'))
-                                        <img src="{{$product->image}}" alt="image">
+                                        <img src="{{$product->image}}" alt="image" style="width: 300px; height: 340px; object-fit: cover;">
                                     @else
-                                        <img src="{{ asset('images/product/'.$product->image)}}" alt="image">
+                                        <img src="{{ asset('images/product/'.$product->image)}}" alt="image" style="width: 300px; height: 340px; object-fit: cover;">
                                     @endif
-                                    {{-- <div class="bg-cover">
-                                    </div> --}}
                                     <div class="single_product_text">
                                         <h4>{{ $product->name }}</h4>
                                         <h3>Rp {{ $product->price }}</h3>

@@ -20,7 +20,11 @@
                         <td>
                         <div class="media">
                             <div class="d-flex">
-                            <img src="{{ $item->image }}" class="mx-auto d-block" alt="" />
+                              @if (Str::contains($item->image, 'https:/'))
+                                  <img src="{{$item->image}}" alt="image" height="200px">
+                              @else
+                                  <img src="{{ asset('images/product/'.$item->image)}}" alt="image" height="200px">
+                              @endif
                             </div>
                             <div class="media-body">
                             <p>{{ $item->name }}</p>
