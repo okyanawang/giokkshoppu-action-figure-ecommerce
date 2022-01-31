@@ -1,4 +1,22 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<h1> ---Sanbercode Laravel Final Project--- </h1>
+<br><br>
+<h2>Tema : Action Figure E-commerce</h2>
+<br><br>
+<h4>With teams :</h4>
+<p>Okyan Awang Ramadhana</p>
+<p>Egi Nawwar Sukma</p>
+<br><br>
+<h4>Diagram ERD :</h4>
+<img src="public/images/erd.png" alt="">
+<br><br>
+<a href="https://drive.google.com/file/d/1LZDKtzjqXy-Di3uisQX_DAyyXDakO7QD/view?usp=sharing">Demo Video Link</a>
+<br><br>
+<h4>Link Web Deploy : </h4>
+<a href="http://one.giokshoppu.sanbercodeapp.com/">http://one.giokshoppu.sanbercodeapp.com/</a>
+
+
+
+<!-- <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
@@ -75,4 +93,4 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT). -->
