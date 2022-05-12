@@ -1,5 +1,3 @@
-<h1> ---Sanbercode Laravel Final Project--- </h1>
-<br><br>
 <h2>Tema : Action Figure E-commerce</h2>
 <br><br>
 <h4>With teams :</h4>
